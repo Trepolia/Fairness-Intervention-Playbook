@@ -3,15 +3,13 @@
 **Target audience:** ML engineers and data scientists implementing fairness improvements
 
 **Purpose:** Practical guide for applying fairness interventions across the ML pipeline and
-    - **Analyze causal mechanisms of bias** by mapping relationships between protected attributes, features, and outcomes.
-    - **Design pre-processing interventions** by transforming, reweighting, and resampling your data.
-    - **Implement fairness-aware modeling** by incorporating constraints, adversarial techniques, and regularization.
-    - **Apply post-processing techniques** by optimizing thresholds and calibrating outputs.
-    - **Create integrated intervention strategies** by combining techniques across the ML pipeline.
+- **Analyze causal mechanisms of bias** by mapping relationships between protected attributes, features, and outcomes.
+- **Design pre-processing interventions** by transforming, reweighting, and resampling your data.
+- **Implement fairness-aware modeling** by incorporating constraints, adversarial techniques, and regularization.
+- **Apply post-processing techniques** by optimizing thresholds and calibrating outputs.
+- **Create integrated intervention strategies** by combining techniques across the ML pipeline.
 
 **Prerequisites:** Completed fairness audit identifying specific issues to address
-
----
 
 ## Introduction
 The Counterfactual Analysis Framework enables evaluation of whether an AI system exhibits causal discrimination by examining how predictions would change under counterfactual scenarios where protected attributes take different values.
@@ -29,8 +27,6 @@ After completing a Fairness Audit Playbook, you'll have identified specific bias
 **Trade-off awareness:** Every intervention involves accuracy, complexity, or interpretability trade-offs
 
 **Iterative process:** Measure → Intervene → Re-measure → Refine
-
----
 
 ## Playbook Architecture
 
@@ -58,9 +54,7 @@ flowchart TD
     I -->|Refine or combine approaches| B
 ```
 
----
-
-### **Technical and Mathematical Sub-Components**
+### Technical and Mathematical Sub-Components
 
 To implement the toolkits above, the framework relies on several foundational modeling and inference components:
 
@@ -69,11 +63,11 @@ To implement the toolkits above, the framework relies on several foundational mo
 3. **Observational Inference Methods:** When experimental data is missing, the framework employs techniques like **matching**, **instrumental variables (IV)**, and **regression discontinuity** to approximate counterfactual scenarios from historical data.
 4. **Validation and Sensitivity Framework:** This component assesses model reliability through **sensitivity analysis** (calculating **E-values** to measure the impact of unmeasured confounders) and testing implied conditional independencies against observed data.
 
-### **Intersectional Considerations**
+### Intersectional Considerations
 
 A comprehensive framework explicitly addresses **intersectionality**, as discrimination often operates through unique pathways for individuals with overlapping marginalized identities. The playbook requires modeling **interaction terms** between attributes and using **intersectional causal graphs** to ensure that interventions do not leave compound discrimination mechanisms unaddressed.
 
-### **Evaluation and Trade-off Analysis**
+### ****Evaluation and Trade-off Analysis****
 
 Finally, the framework includes an **evaluation approach** that explicitly assesses **trade-offs** between fairness improvements and predictive performance. This ensures that practitioners can find an optimal balance between maintaining model utility and achieving ethical and legal fairness objectives.
 
